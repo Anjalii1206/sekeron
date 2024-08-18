@@ -79,21 +79,21 @@ function Weather({ data }) {
       <CardBody>
         <Flex flexDirection={{ base: "column", md: "row" }} justify="space-between" alignItems="center" marginBottom="20px" >
           <Box>
-            <Heading as="h3" size={{ base: "lg", md: "2xl" }}> {" "} {location.name}{" "} </Heading>
+            <Heading as="h3" size={{ base: "lg", md: "2xl" }}>{location.name}</Heading>
             <Text fontSize={{ base: "sm", md: "md" }}>{location.region}</Text>
             <Text fontSize={{ base: "sm", md: "md" }}>{location.country}</Text>
           </Box>
           <Box textAlign="right" p={1}>
-            <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="medium"> {" "} {formattedDate}{" "} </Text>
-            <Text fontSize={{ base: "sm", md: "lg" }} fontWeight="medium"> {" "} {day}{" "} </Text>
+            <Text fontSize={{ base: "md", md: "lg" }} fontWeight="medium">{formattedDate} </Text>
+            <Text fontSize={{ base: "md", md: "lg" }} fontWeight="medium">  {day} </Text>
           </Box>
         </Flex>
 
         <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center" justify="space-between" >
-          <Text fontSize={{ base: "3xl", md: "6xl" }} fontWeight="medium" mb={{ base: "2px" }} > {" "} {current.temp_c}°C{" "} </Text>
+          <Text fontSize={{ base: "3xl", md: "6xl" }} fontWeight="medium" mb={{ base: "2px" }} > {current.temp_c}°C </Text>
           <Box textAlign="center" mt={{ base: "1px", md: "0" }} ml={{ base: "0", md: "20px" }} >
             <Image src={wIcon} alt={current.condition.text} boxSize={{ base: "40px", md: "60px" }} marginBottom="10px" />
-            <Text fontSize={{ base: "md", md: "lg" }} fontWeight="medium" marginBottom="10px" > {" "} {current.condition.text}{" "} </Text>
+            <Text fontSize={{ base: "md", md: "lg" }} fontWeight="medium" marginBottom="10px" > {current.condition.text}</Text>
           </Box>
         </Flex>
 
